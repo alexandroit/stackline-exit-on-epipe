@@ -1,21 +1,43 @@
 {
-	"name": "exit-on-epipe",
-	"version": "1.0.1",
-	"author": "sheetjs",
-	"description": "Cleanly exit process on EPIPE",
-	"keywords": [ "epipe", "pipe", "error", "exit" ],
-	"main": "./exit-on-epipe",
-	"dependencies": {
-	},
-	"devDependencies": {
-		"mocha":"~2.5.3"
-	},
-	"repository": { "type":"git", "url":"git://github.com/SheetJS/node-exit-on-epipe.git" },
-	"scripts": {
-		"test": "make test"
-	},
-	"files": ["exit-on-epipe.js", "LICENSE", "README.md"],
-	"bugs": { "url": "https://github.com/SheetJS/node-exit-on-epipe/issues" },
-	"license": "Apache-2.0",
-	"engines": { "node": ">=0.8" }
+  "name": "@stackline/exit-on-epipe",
+  "version": "1.0.0",
+  "author": "sheetjs",
+  "description": "Cleanly exit process on EPIPE",
+  "keywords": [
+    "epipe",
+    "pipe",
+    "error",
+    "exit"
+  ],
+  "main": "./exit-on-epipe",
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "12.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexandroit/stackline-exit-on-epipe.git"
+  },
+  "scripts": {
+    "test": "mocha --timeout 10000 test.js test/*.cjs",
+    "lint": "node --check exit-on-epipe.js"
+  },
+  "files": [
+    "exit-on-epipe.js",
+    "LICENSE",
+    "README.md",
+    "CHANGELOG.md",
+    "NOTICE"
+  ],
+  "bugs": {
+    "url": "https://github.com/alexandroit/stackline-exit-on-epipe/issues"
+  },
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "homepage": "https://github.com/alexandroit/stackline-exit-on-epipe#readme",
+  "publishConfig": {
+    "access": "public"
+  }
 }

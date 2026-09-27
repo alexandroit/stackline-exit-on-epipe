@@ -1,3 +1,15 @@
+# @stackline/exit-on-epipe
+
+Maintained fork of [exit-on-epipe](https://github.com/SheetJS/node-exit-on-epipe) 1.0.1. Apache-2.0; original copyright notices are retained.
+
+A custom `bail` callback may return normally after handling EPIPE. The handled pipe error is no longer rethrown. Automatic stdout registration and unrelated error handling are preserved.
+
+Requires Node.js 20.19 or newer. No runtime dependencies.
+
+## Stackline development
+
+Run `npm ci`, `npm test` and `npm run lint`. The checked-in upstream fixtures and focused regression suite run without downloading external test data.
+
 # exit-on-epipe
 
 Cleanly exit on pipe errors in NodeJS scripts.
@@ -34,7 +46,7 @@ The process will cleanly exit if you require the module:
 
 ```bash
 $ cat t.js
-require("exit-on-epipe");
+require("@stackline/exit-on-epipe");
 for(var i = 0; i < 10; ++i) console.log(i)
 $ node t.js  | head -n 1
 0
@@ -45,7 +57,7 @@ $ node t.js  | head -n 1
 With [npm](https://www.npmjs.org/package/exit-on-epipe):
 
 ```bash
-$ npm install exit-on-epipe
+$ npm install @stackline/exit-on-epipe
 ```
 
 ## Usage
@@ -53,14 +65,14 @@ $ npm install exit-on-epipe
 For basic scripts, requiring at the top of the source file suffices:
 
 ```js
-require('exit-on-epipe');
+require('@stackline/exit-on-epipe');
 // ... rest of source
 ```
 
 For more advanced situations (e.g. handing other streams), call the module:
 
 ```js
-var eoepipe = require('exit-on-epipe');
+var eoepipe = require('@stackline/exit-on-epipe');
 eoepipe(stream);            // will exit process on an EPIPE error on stream
 eoepipe(stream, handler);   // will call handler() instead of process.exit
 ```

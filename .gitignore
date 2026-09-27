@@ -1,1 +1,10 @@
 node_modules
+.DS_Store
+.env
+.env.*
+*.log
+coverage/
+
+node_modules/
+*.tgz
+artifact/

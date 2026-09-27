@@ -1,0 +1,4 @@
+@stackline/exit-on-epipe is a maintained fork of exit-on-epipe.
+Original work Copyright SheetJS; distributed under the Apache License 2.0.
+Stackline modifications Copyright 2026 Stackline contributors.
+The original LICENSE and source notices are preserved.
