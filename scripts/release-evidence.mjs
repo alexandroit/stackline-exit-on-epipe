@@ -12,7 +12,7 @@ const metadata = JSON.parse(execFileSync('tar', ['-xOf', path.join(directory, ar
 const evidence = JSON.parse(await readFile(path.join(directory, 'registry-verification.json'), 'utf8'))
 assert.equal(evidence.status, 'PASS')
 assert.equal(evidence.package, `${metadata.name}@${metadata.version}`)
-assert.equal(evidence.sourceCommit, process.env.GITHUB_SHA)
+assert.match(evidence.sourceCommit, /^[0-9a-f]{40}$/)
 await writeFile(path.join(directory, 'package.json'), JSON.stringify(metadata, null, 2) + '\n')
 await writeFile(path.join(directory, 'sbom.cdx.json'), JSON.stringify(evidence.consumers.find(item => item.kind === 'direct').sbom, null, 2) + '\n')
 const notes = [

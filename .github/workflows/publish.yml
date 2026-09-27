@@ -134,21 +134,10 @@ jobs:
         env:
           CI_RUN_ID: ${{ inputs.ci_run_id }}
         run: node scripts/release-evidence.mjs artifact
-      - name: Publish the immutable GitHub release
+      - name: Publish and verify the immutable GitHub release
         env:
           GH_TOKEN: ${{ github.token }}
-        shell: bash
-        run: |
-          set -euo pipefail
-          gh api "repos/$GITHUB_REPOSITORY/immutable-releases" --jq '.enabled' | grep -x true
-          tag="v$(node -p "require('./package.json').version")"
-          if gh release view "$tag" --json isDraft > "$RUNNER_TEMP/release.json" 2>/dev/null; then
-            jq -e '.isDraft == true' "$RUNNER_TEMP/release.json"
-          else
-            gh release create "$tag" --draft --target "$GITHUB_SHA" --title "$(node -p "require('./package.json').name") $tag" --notes-file artifact/RELEASE_NOTES.md
-          fi
-          gh release upload "$tag" artifact/* --clobber
-          gh release edit "$tag" --draft=false --latest
+        run: node scripts/publish-github-release.mjs artifact
       - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a7 # v7.0.1
         if: always()
         with:
