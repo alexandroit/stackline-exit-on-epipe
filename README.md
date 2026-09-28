@@ -1,16 +1,25 @@
 # @stackline/exit-on-epipe
 
+> Handle broken output pipes in Node.js command-line programs with the exit-on-epipe API.
+
+[![npm version](https://img.shields.io/npm/v/@stackline/exit-on-epipe.svg?style=flat-square)](https://www.npmjs.com/package/@stackline/exit-on-epipe)
+[![license](https://img.shields.io/npm/l/@stackline/exit-on-epipe.svg?style=flat-square)](https://github.com/alexandroit/stackline-exit-on-epipe/blob/main/LICENSE)
+[![GitHub repository](https://img.shields.io/badge/GitHub-Repository-181717?style=flat-square&logo=github)](https://github.com/alexandroit/stackline-exit-on-epipe)
+
+**[Documentation](https://github.com/alexandroit/stackline-exit-on-epipe#readme)** |
+**[npm](https://www.npmjs.com/package/@stackline/exit-on-epipe)** |
+**[Issues](https://github.com/alexandroit/stackline-exit-on-epipe/issues)** |
+**[Repository](https://github.com/alexandroit/stackline-exit-on-epipe)**
+
+**Package version:** `1.0.1`
+
+## Why this package?
+
 Maintained fork of [exit-on-epipe](https://github.com/SheetJS/node-exit-on-epipe) 1.0.1. Apache-2.0; original copyright notices are retained.
 
 A custom `bail` callback may return normally after handling EPIPE. The handled pipe error is no longer rethrown. Automatic stdout registration and unrelated error handling are preserved.
 
 Requires Node.js 20.19 or newer. No runtime dependencies.
-
-## Stackline development
-
-Run `npm ci`, `npm test` and `npm run lint`. The checked-in upstream fixtures and focused regression suite run without downloading external test data.
-
-# exit-on-epipe
 
 Cleanly exit on pipe errors in NodeJS scripts.
 
@@ -52,15 +61,33 @@ $ node t.js  | head -n 1
 0
 ```
 
+## Compatibility
+
+| Item | Value |
+| --- | --- |
+| Package | `@stackline/exit-on-epipe@1.0.1` |
+| Supported Node.js | `>=20.19.0` |
+| Module entry | `./exit-on-epipe` (CommonJS) |
+| Runtime dependencies | 0 direct dependencies |
+
 ## Installation
 
-With [npm](https://www.npmjs.org/package/exit-on-epipe):
+```bash
+npm install @stackline/exit-on-epipe
+```
+
+With [npm](https://www.npmjs.com/package/@stackline/exit-on-epipe):
 
 ```bash
 $ npm install @stackline/exit-on-epipe
 ```
 
 ## Usage
+
+```js
+require('@stackline/exit-on-epipe');
+process.stdout.write('Hello\n');
+```
 
 For basic scripts, requiring at the top of the source file suffices:
 
@@ -77,7 +104,13 @@ eoepipe(stream);            // will exit process on an EPIPE error on stream
 eoepipe(stream, handler);   // will call handler() instead of process.exit
 ```
 
-## Interface
+## Security
+
+Only EPIPE is handled by the configured bail callback. Unrelated stream errors retain their existing behavior.
+
+## API Surface
+
+### Interface
 
 The module exports a single function (exposed as the variable `eoepipe`).
 
@@ -91,26 +124,48 @@ If the `bail` function is not specified, `process.exit` is used.
 
 If the `stream` parameter is not specified, no action will be taken
 
-## Notes
+### Notes
 
 The script will not perform any action if `process` or `process.stdout` are not
 available.  It is safe to use in a web page.
 
+## Local Development
+
+Clone the [repository](https://github.com/alexandroit/stackline-exit-on-epipe) and run the following commands from its root:
+
+```bash
+npm ci
+npm test
+npm run lint
+```
+
+The retained upstream development notes below include historical tooling; the commands above are the maintained package checks.
+
+### Stackline development
+
+Run `npm ci`, `npm test` and `npm run lint`. The checked-in upstream fixtures and focused regression suite run without downloading external test data.
+
+## Release Checklist
+
+1. Update the package version, lockfile, generated version fields, and changelog together.
+2. Run the development checks above and audit both `npm audit` and `npm audit --omit=dev`.
+3. Use the [GitHub publish workflow](https://github.com/alexandroit/stackline-exit-on-epipe/actions/workflows/publish.yml) with its `Prod` environment to publish the exact CI tarball.
+4. Verify public npm bytes, package identity, provenance, and the immutable GitHub release evidence.
+
+## Community and Support
+
+Report reproducible package issues in the [issue tracker](https://github.com/alexandroit/stackline-exit-on-epipe/issues).
+
+- [Stackline / Alexandro.Net](https://alexandro.net/)
+- [GitHub](https://github.com/alexandroit)
+- [Maintainer LinkedIn](https://www.linkedin.com/in/aleinfo/)
+- [Reddit community: r/Stackline](https://www.reddit.com/r/Stackline/)
+
 ## License
+
+[Apache-2.0](https://github.com/alexandroit/stackline-exit-on-epipe/blob/main/LICENSE). Original copyright notices and upstream attribution are retained.
 
 Please consult the attached LICENSE file for details.  All rights not explicitly
 granted by the Apache 2.0 license are reserved by the Original Author.
 
-## Badges
-
-[![Build Status](https://travis-ci.org/SheetJS/node-exit-on-epipe.svg?branch=master)](https://travis-ci.org/SheetJS/node-exit-on-epipe)
-
-[![npm license](https://img.shields.io/npm/l/exit-on-epipe.svg)](https://npmjs.org/package/exit-on-epipe)
-
-[![NPM Downloads](https://img.shields.io/npm/dt/exit-on-epipe.svg)](https://npmjs.org/package/exit-on-epipe)
-
-[![Dependencies Status](https://david-dm.org/sheetjs/node-exit-on-epipe/status.svg)](https://david-dm.org/sheetjs/node-exit-on-epipe)
-
-[![ghit.me](https://ghit.me/badge.svg?repo=sheetjs/node-exit-on-epipe)](https://ghit.me/repo/sheetjs/node-exit-on-epipe)
-
-[![Analytics](https://ga-beacon.appspot.com/UA-36810333-1/SheetJS/node-exit-on-epipe?pixel)](https://github.com/SheetJS/node-exit-on-epipe)
+See [NOTICE](https://github.com/alexandroit/stackline-exit-on-epipe/blob/main/NOTICE) for retained attribution.

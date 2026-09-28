@@ -1,13 +1,18 @@
 {
   "name": "@stackline/exit-on-epipe",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "sheetjs",
-  "description": "Cleanly exit process on EPIPE",
+  "description": "Handle broken output pipes in Node.js command-line programs with the exit-on-epipe API",
   "keywords": [
+    "stackline",
     "epipe",
     "pipe",
     "error",
-    "exit"
+    "exit",
+    "stdout",
+    "cli",
+    "nodejs",
+    "error-handling"
   ],
   "main": "./exit-on-epipe",
   "dependencies": {},
