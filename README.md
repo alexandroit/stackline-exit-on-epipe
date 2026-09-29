@@ -4,13 +4,13 @@
 
 [![npm version](https://img.shields.io/npm/v/@stackline/exit-on-epipe.svg?style=flat-square)](https://www.npmjs.com/package/@stackline/exit-on-epipe)
 [![license](https://img.shields.io/npm/l/@stackline/exit-on-epipe.svg?style=flat-square)](https://github.com/alexandroit/stackline-exit-on-epipe)
-[![GitHub repository](https://img.shields.io/badge/GitHub-alexandroit%2Fstackline-exit-on-epipe-181717?style=flat-square&logo=github)](https://github.com/alexandroit/stackline-exit-on-epipe)
+[![GitHub repository](https://img.shields.io/badge/GitHub-repository-181717?style=flat-square&logo=github)](https://github.com/alexandroit/stackline-exit-on-epipe)
 [![Docs](https://img.shields.io/badge/docs-alexandro.net-0f766e?style=flat-square)](https://alexandro.net/docs/vanilla/exit-on-epipe/)
 [![Reddit community](https://img.shields.io/badge/community-r%2FStackline-ff4500?style=flat-square&logo=reddit&logoColor=white)](https://www.reddit.com/r/Stackline/)
 
 **[Documentation](https://alexandro.net/docs/vanilla/exit-on-epipe/)** | **[npm](https://www.npmjs.com/package/@stackline/exit-on-epipe)** | **[Issues](https://github.com/alexandroit/stackline-exit-on-epipe/issues)** | **[Repository](https://github.com/alexandroit/stackline-exit-on-epipe)**
 
-**Current package version:** `1.0.1`
+**Current package version:** `1.0.2`
 
 ---
 
@@ -66,7 +66,7 @@ $ node t.js  | head -n 1
 
 | Item | Value |
 | --- | --- |
-| Package | `@stackline/exit-on-epipe@1.0.1` |
+| Package | `@stackline/exit-on-epipe@1.0.2` |
 | Supported Node.js | `>=20.19.0` |
 | Module entry | `./exit-on-epipe` (CommonJS) |
 | Runtime dependencies | 0 direct dependencies |
