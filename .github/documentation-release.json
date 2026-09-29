@@ -1,0 +1,26 @@
+{
+  "repository": "alexandroit/stackline-exit-on-epipe",
+  "packages": [
+    {
+      "name": "@stackline/exit-on-epipe",
+      "path": "README.md",
+      "version": "1.0.1",
+      "baselineVersion": "1.0.0",
+      "keywords": [
+        "stackline",
+        "npm-package",
+        "exit-on-epipe",
+        "nodejs",
+        "epipe",
+        "pipe",
+        "error",
+        "exit"
+      ],
+      "homepage": "https://alexandro.net/docs/vanilla/exit-on-epipe/",
+      "baselineTarball": "https://registry.npmjs.org/@stackline/exit-on-epipe/-/exit-on-epipe-1.0.0.tgz",
+      "baselineIntegrity": "sha512-F0FJLvVvU+Mm6BE2DnKc+/cZe3eCBgmbcDGfyZH7fLbyob6Gck4DEu7Nk+kmoT9fTeFWs81p4exToiFwlm43eA==",
+      "expectedSha512": "578e4a323ebeb486e4d340799ca7a059ac1820581f8ad53c00d6d836a81ecace0303dc1ee144f160a3404a7f9a5c61dedb381854609230c3c2f51d18bbc5e897",
+      "tag": "docs-stackline-exit-on-epipe-v1.0.1"
+    }
+  ]
+}
