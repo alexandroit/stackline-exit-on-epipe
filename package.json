@@ -5,14 +5,13 @@
   "description": "Handle broken output pipes in Node.js command-line programs with the exit-on-epipe API",
   "keywords": [
     "stackline",
+    "npm-package",
+    "exit-on-epipe",
+    "nodejs",
     "epipe",
     "pipe",
     "error",
-    "exit",
-    "stdout",
-    "cli",
-    "nodejs",
-    "error-handling"
+    "exit"
   ],
   "main": "./exit-on-epipe",
   "dependencies": {},
@@ -41,7 +40,7 @@
   "engines": {
     "node": ">=20.19.0"
   },
-  "homepage": "https://github.com/alexandroit/stackline-exit-on-epipe#readme",
+  "homepage": "https://alexandro.net/docs/vanilla/exit-on-epipe/",
   "publishConfig": {
     "access": "public"
   }

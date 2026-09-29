@@ -1,17 +1,18 @@
 # @stackline/exit-on-epipe
 
-> Handle broken output pipes in Node.js command-line programs with the exit-on-epipe API.
+> Cleanly exit process on EPIPE.
 
 [![npm version](https://img.shields.io/npm/v/@stackline/exit-on-epipe.svg?style=flat-square)](https://www.npmjs.com/package/@stackline/exit-on-epipe)
-[![license](https://img.shields.io/npm/l/@stackline/exit-on-epipe.svg?style=flat-square)](https://github.com/alexandroit/stackline-exit-on-epipe/blob/main/LICENSE)
-[![GitHub repository](https://img.shields.io/badge/GitHub-Repository-181717?style=flat-square&logo=github)](https://github.com/alexandroit/stackline-exit-on-epipe)
+[![license](https://img.shields.io/npm/l/@stackline/exit-on-epipe.svg?style=flat-square)](https://github.com/alexandroit/stackline-exit-on-epipe)
+[![GitHub repository](https://img.shields.io/badge/GitHub-alexandroit%2Fstackline-exit-on-epipe-181717?style=flat-square&logo=github)](https://github.com/alexandroit/stackline-exit-on-epipe)
+[![Docs](https://img.shields.io/badge/docs-alexandro.net-0f766e?style=flat-square)](https://alexandro.net/docs/vanilla/exit-on-epipe/)
+[![Reddit community](https://img.shields.io/badge/community-r%2FStackline-ff4500?style=flat-square&logo=reddit&logoColor=white)](https://www.reddit.com/r/Stackline/)
 
-**[Documentation](https://github.com/alexandroit/stackline-exit-on-epipe#readme)** |
-**[npm](https://www.npmjs.com/package/@stackline/exit-on-epipe)** |
-**[Issues](https://github.com/alexandroit/stackline-exit-on-epipe/issues)** |
-**[Repository](https://github.com/alexandroit/stackline-exit-on-epipe)**
+**[Documentation](https://alexandro.net/docs/vanilla/exit-on-epipe/)** | **[npm](https://www.npmjs.com/package/@stackline/exit-on-epipe)** | **[Issues](https://github.com/alexandroit/stackline-exit-on-epipe/issues)** | **[Repository](https://github.com/alexandroit/stackline-exit-on-epipe)**
 
-**Package version:** `1.0.1`
+**Current package version:** `1.0.1`
+
+---
 
 ## Why this package?
 
@@ -152,15 +153,6 @@ Run `npm ci`, `npm test` and `npm run lint`. The checked-in upstream fixtures an
 3. Use the [GitHub publish workflow](https://github.com/alexandroit/stackline-exit-on-epipe/actions/workflows/publish.yml) with its `Prod` environment to publish the exact CI tarball.
 4. Verify public npm bytes, package identity, provenance, and the immutable GitHub release evidence.
 
-## Community and Support
-
-Report reproducible package issues in the [issue tracker](https://github.com/alexandroit/stackline-exit-on-epipe/issues).
-
-- [Stackline / Alexandro.Net](https://alexandro.net/)
-- [GitHub](https://github.com/alexandroit)
-- [Maintainer LinkedIn](https://www.linkedin.com/in/aleinfo/)
-- [Reddit community: r/Stackline](https://www.reddit.com/r/Stackline/)
-
 ## License
 
 [Apache-2.0](https://github.com/alexandroit/stackline-exit-on-epipe/blob/main/LICENSE). Original copyright notices and upstream attribution are retained.
@@ -169,3 +161,24 @@ Please consult the attached LICENSE file for details.  All rights not explicitly
 granted by the Apache 2.0 license are reserved by the Original Author.
 
 See [NOTICE](https://github.com/alexandroit/stackline-exit-on-epipe/blob/main/NOTICE) for retained attribution.
+
+## Credits and original authors
+
+- Original project: [node-exit-on-epipe](https://github.com/SheetJS/node-exit-on-epipe).
+- sheetjs.
+- Copyright (C) 2015-present   SheetJS LLC.
+- Original work Copyright SheetJS; distributed under the Apache License 2.0.
+- Stackline modifications Copyright 2026 Stackline contributors.
+- Stackline maintenance: [Alexandro Paixao Marques](https://www.linkedin.com/in/aleinfo/) and [Stackline contributors](https://github.com/alexandroit).
+
+Original copyright, license notices and contributor acknowledgements remain part of this distribution. Stackline maintenance does not replace authorship of the original work.
+
+## Community and Links
+
+- [Stackline website](https://alexandro.net/)
+- [GitHub projects](https://github.com/alexandroit)
+- [npm packages](https://www.npmjs.com/~alex360qc)
+- [Reddit community — r/Stackline](https://www.reddit.com/r/Stackline/)
+- [Maintainer LinkedIn](https://www.linkedin.com/in/aleinfo/)
+
+Use this repository's issue tracker for reproducible bugs and feature requests. Join r/Stackline for examples, usage questions and release discussions.
