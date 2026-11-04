@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.3 — 2026-11-04
+
+- Publish patched development dependency metadata and scoped overrides for vulnerable glob matching dependencies.
+- Run build and publication workflows on patched supported Node.js releases.
+
 ## 1.0.1 (2026-09-28)
 
 - Standardize package documentation, preserve the API reference and upstream attribution, and add Stackline community links.

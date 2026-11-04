@@ -10,7 +10,7 @@
 
 **[Documentation](https://alexandro.net/docs/vanilla/exit-on-epipe/)** | **[npm](https://www.npmjs.com/package/@stackline/exit-on-epipe)** | **[Issues](https://github.com/alexandroit/stackline-exit-on-epipe/issues)** | **[Repository](https://github.com/alexandroit/stackline-exit-on-epipe)**
 
-**Current package version:** `1.0.2`
+**Current package version:** `1.0.3`
 
 ---
 
@@ -66,7 +66,7 @@ $ node t.js  | head -n 1
 
 | Item | Value |
 | --- | --- |
-| Package | `@stackline/exit-on-epipe@1.0.2` |
+| Package | `@stackline/exit-on-epipe@1.0.3` |
 | Supported Node.js | `>=20.19.0` |
 | Module entry | `./exit-on-epipe` (CommonJS) |
 | Runtime dependencies | 0 direct dependencies |
